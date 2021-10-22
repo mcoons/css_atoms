@@ -1,0 +1,80 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: black;
+}
+
+h1{
+    margin-top: 0;
+    margin-bottom: 3px;
+}
+
+#container {
+    perspective: 600px;
+    width: 50%;
+    height:10%;
+    margin: auto auto;
+  }
+  
+.card {
+    position: absolute;
+    width: 230px;
+    height: 260px;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+
+    font-weight: bold;
+    text-align:center; 
+
+    animation-name: mover;
+    animation-timing-function: linear;
+    /* animation-iteration-count: infinite; */
+    animation-duration: 15s;
+
+    transform-style: preserve-3d;
+}
+
+.aNumb {
+    font-size: 50px;
+    text-align: left;
+}
+
+.aName, .aMass {
+    font-size: 32px;
+}
+
+.aSymb {
+    font-size: 65px;
+}
+
+.aConf {
+    font-size: 20px;
+    margin-top: 10px
+}
+
+@keyframes mover {
+    0% {
+        transform: translateZ(800px);
+        opacity: 1;
+      }
+      50% {
+        transform: translateZ(-1400);
+        opacity: 1;
+      }
+    100% {
+      transform: translateZ(-4200px);
+      opacity: 0;
+    }
+  }
+
+/* 
+  .animation_playing {
+    animation-play-state: running;
+  }
+
+  .animation_paused {
+    animation-play-state: paused;
+  } */
